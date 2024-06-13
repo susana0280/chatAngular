@@ -1,0 +1,12 @@
+<nav class="navbar navbar-dark bg-dark nav">
+    <div  *ngIf="userData" class="usuario">
+      <p>  {{userData.user.displayName?userData.user.displayName:userData.user.email}}</p>
+        <img src="{{userData.user.photoURL}}">
+        <button class="btn btn-outline-success my-2 my-sm-0 salir" (click)="logout()">Salir</button>
+    </div>
+    <div  *ngIf="!userData" class="login">
+        <button class="btn btn-outline-success my-2 my-sm-0" (click)="login()">Login</button>
+    </div>
+  </nav>
+<app-chat></app-chat>
+

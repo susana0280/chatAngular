@@ -1,0 +1,31 @@
+<div  *ngIf="loggedUsed && !monstrarChat" class="chatIconContainer" (click)="monstrarChat=true">
+    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBDVFdgA55sMTbMna_S_U8oBrEPfWzKsRpw&s" class="chatIcon" alt="chat Icon">
+</div>
+
+<div class="card text-center cardContainer" *ngIf="loggedUsed && monstrarChat">
+    <div class="card-header">
+      CHAT
+      <div class="closeIcon" (click)="monstrarChat=false">X</div>
+    </div>
+    <div    id="contenedorMensajes"    class="card-body contenedorMensajes">
+    
+        <div *ngFor="let message of messages">
+
+            <p class="msj"    [ngClass]="(loggedUsed.user.uid===message.transmitter)?'send':'received'">
+               
+                {{message.text}}
+            </p>
+        </div>
+        
+    </div>
+
+    <form class="card-footer text-muted input-group" (ngSubmit)="sendMessage()">
+ 
+            <input type="text" class="form-control" placeholder="Ingrese su mensaje" [(ngModel)]="newMessage" [ngModelOptions]="{standalone: true}">
+         <div class="input-group-append" (click)="sendMessage()">
+            <span class="input-group-text" id="basic-addon2">
+                <img class="imgSend" src="https://cdn.icon-icons.com/icons2/1126/PNG/512/1486164461-send_79678.png" alt="enviar">
+            </span>
+        </div>
+    </form>
+  </div>

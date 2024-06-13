@@ -1,0 +1,92 @@
+.cardContainer{
+    width: 300px;
+    height: 500px;
+    position: fixed;
+    right: 0.5rem;
+    bottom: 0.5rem;
+}
+
+.card-header{
+    background-color: blue;
+    color: white;
+    font-weight: 700;
+}
+
+.imgSend{
+   width: 30px;
+   height: 30px;
+}
+.imgSend:active{
+   
+    transform: scale(0.9);
+ }
+.card-body{
+    padding: 0.5rem;
+    background-image: url(https://unageek.com/wp-content/uploads/2020/03/Fondo_pantalla_chat_WA_StarWars_UnaGeek_Claro.jpg);
+    
+}
+
+.send{
+display: block;
+float: right;
+background-color: teal;
+color: white;
+min-width: 50.01%;
+border-radius: 10px;
+text-align: left;
+
+}
+.received{
+    display: block;
+    float: left;
+    background-color: grey;
+    color: white;
+    min-width: 50.01%;
+    border-radius: 10px;
+    text-align: left;
+   
+}
+
+.contenedorMensajes{
+   
+    overflow: scroll;    
+}
+
+.contenedorMensajes::-webkit-scrollbar{
+    display: none;
+}
+
+.chatIconContainer{
+    position: fixed;
+    right: 5rem;
+    bottom: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor:pointer;
+    background-color: grey;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 2px rgb(47, 46, 46);
+   
+}
+
+.chatIcon{
+    width: 40px;
+    height: 40px;
+   
+}
+
+.closeIcon{
+    width: 40px;
+    height: 40px;
+    cursor:pointer;
+    background-color: grey;
+    border-radius: 100%;
+    box-shadow: 0 0 10px 2px rgb(47, 46, 46);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

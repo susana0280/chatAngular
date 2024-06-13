@@ -1,0 +1,22 @@
+<div class="container">
+
+    <h1>REGISTRO DE USUARIO</h1>
+<form  [formGroup]="formReg">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"  formControlName="email">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" formControlName="password">
+    </div>
+    <br>
+
+    <button type="submit" class="btn btn-primary" (click)="enviar()">Enviar</button>
+  </form>
+  <br>
+  <br>
+  <button class="btn btn-primary inicio"  (click)="volver()">Volver a Login</button>
+</div>
